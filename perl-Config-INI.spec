@@ -1,24 +1,23 @@
+%define upstream_name    Config-INI
+%define upstream_version 0.015
 
-%define realname   Config-INI
-%define version    0.014
-%define release    %mkrel 2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    A subclassable .ini-file emitter
-Source:     http://www.cpan.org/modules/by-module/Config/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Carp)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Mixin::Linewise::Readers)
 BuildRequires: perl(Mixin::Linewise::Writers)
 
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Config::INI::Reader is _yet another_ config module implementing _yet
@@ -30,17 +29,15 @@ The chief difference is that Config::INI::Reader is designed to be
 subclassed to allow for side-effects and self-reconfiguration to occur
 during the course of reading its input.
 
-
-
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
@@ -51,8 +48,6 @@ rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%doc Changes LICENSE README
+%doc Changes LICENSE README META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
