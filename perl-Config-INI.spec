@@ -1,5 +1,5 @@
 %define upstream_name    Config-INI
-%define upstream_version 0.015
+%define upstream_version 0.016
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
