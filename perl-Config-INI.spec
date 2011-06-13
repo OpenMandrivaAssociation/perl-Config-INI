@@ -1,9 +1,9 @@
 %define upstream_name    Config-INI
-%define upstream_version 0.017
+%define upstream_version 0.018
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:    A subclassable .ini-file emitter
 License:    GPL+ or Artistic
