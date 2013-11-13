@@ -12,6 +12,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Config/Config-INI-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires: perl(Capture::Tiny)
 BuildRequires:	perl(Carp)
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Mixin::Linewise::Readers)
