@@ -1,5 +1,5 @@
 %define upstream_name    Config-INI
-%define upstream_version 0.021
+%define upstream_version 0.022
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -81,6 +81,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Tue Mar 24 2009 cpan2dist 0.014-1mdv
 - initial mdv release, generated with cpan2dist
+
 
 
 
