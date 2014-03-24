@@ -1,5 +1,5 @@
 %define upstream_name    Config-INI
-%define upstream_version 0.022
+%define upstream_version 0.023
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	A subclassable .ini-file emitter
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Config/Config-INI-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires: perl(Capture::Tiny)
@@ -81,6 +81,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Tue Mar 24 2009 cpan2dist 0.014-1mdv
 - initial mdv release, generated with cpan2dist
+
 
 
 
