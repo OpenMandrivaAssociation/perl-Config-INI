@@ -3,5 +3,6 @@ removed_sources:
   Config-INI-0.020.tar.gz: 4f7ce5aed2a619a8d1cf9faa0e338983674dd1de
   Config-INI-0.021.tar.gz: 246adfa5fe2fd9b2cd82bb560b5fa6e310faef86
   Config-INI-0.022.tar.gz: b16ff78897768108781327bb2a249cbf2e85b982
-sources:
   Config-INI-0.023.tar.gz: 193408c811a56fb2baf6b30ad473e3cba005c890
+sources:
+  Config-INI-0.024.tar.gz: 41ee63a927f009d8b72079254a8390d4a1f16c1a
