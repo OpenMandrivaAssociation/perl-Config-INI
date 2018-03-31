@@ -1,23 +1,24 @@
 %define upstream_name    Config-INI
-%define upstream_version 0.024
+%define upstream_version 0.025
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	A subclassable .ini-file emitter
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
-BuildRequires: perl(Capture::Tiny)
+BuildRequires:	perl(Capture::Tiny)
 BuildRequires:	perl(Carp)
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Mixin::Linewise::Readers)
 BuildRequires:	perl(Mixin::Linewise::Writers)
+BuildRequires:	perl(PerlIO::utf8_strict)
 
 BuildArch:	noarch
 
