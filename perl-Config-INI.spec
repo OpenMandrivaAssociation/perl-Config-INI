@@ -1,9 +1,9 @@
 %define upstream_name    Config-INI
-%define upstream_version 0.025
+%define upstream_version 0.027
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	A subclassable .ini-file emitter
 
