@@ -19,6 +19,7 @@ BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Mixin::Linewise::Readers)
 BuildRequires:	perl(Mixin::Linewise::Writers)
 BuildRequires:	perl(PerlIO::utf8_strict)
+BuildRequires:	perl(Test::More)
 
 BuildArch:	noarch
 
