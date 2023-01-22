@@ -1,8 +1,7 @@
 %define upstream_name    Config-INI
-%define upstream_version 0.027
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Version:	0.029
 Release:	1
 
 Summary:	A subclassable .ini-file emitter
@@ -10,7 +9,7 @@ Summary:	A subclassable .ini-file emitter
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Config::INI
-Source0:	http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Capture::Tiny)
@@ -34,21 +33,19 @@ subclassed to allow for side-effects and self-reconfiguration to occur
 during the course of reading its input.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes LICENSE README META.yml
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
-
-
