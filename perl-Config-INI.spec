@@ -8,7 +8,7 @@ Summary:	A subclassable .ini-file emitter
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Config::INI
+Url:		https://metacpan.org/pod/Config::INI
 Source0:	http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	perl-devel
