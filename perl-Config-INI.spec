@@ -2,7 +2,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.029
-Release:	1
+Release:	2
 
 Summary:	A subclassable .ini-file emitter
 
